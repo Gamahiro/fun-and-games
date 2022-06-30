@@ -1,3 +1,4 @@
+const container = document.querySelector(".container");
 const chopWoodBtn = document.querySelector("#chopWood");
 const woodCount = document.querySelector("#woodCount");
 const craftPlankBtn = document.querySelector("#craftPlank");
@@ -10,7 +11,7 @@ const buildHouseBtn = document.querySelector("#buildHouse");
 const villagerCount = document.querySelector("#villagerCount");
 const recruitVillagerBtn = document.querySelector('#recruitVillager');
 const gainAmount = document.querySelector('#gainAmount');
-
+const infoButton = document.querySelector('#infoButton');
 
 let woodAmount = 0;
 let plankAmount = 0;
@@ -133,7 +134,7 @@ function changeColorText() {
  setInterval(gainVillagerIncome, 750);
 
 
-
+ let visible = false;
 
 
 
@@ -143,6 +144,24 @@ sellWoodBtn.addEventListener('click', () => {sellItem("wood");});
 sellPlanksBtn.addEventListener('click', () => {sellItem("planks");});
 buildHouseBtn.addEventListener('click', buildHouse);
 recruitVillagerBtn.addEventListener('click', recruitVillager);
+infoButton.addEventListener('click', () => {
+
+  
+
+if (visible === false) {
+    document.querySelector(".infoBox").innerHTML = "<p>Testing a lot of stuff, we'll see how well this goes when i write a longer sentence</p>"
+    document.querySelector(".infoBox").style.display = "block";
+    visible = true;
+}else {
+    document.querySelector(".infoBox").textContent = "";
+    document.querySelector(".infoBox").style.display = "none";
+    visible = false;
+}
+
+
+
+
+})
 
 
 //wood > planks > house > villager with passive income

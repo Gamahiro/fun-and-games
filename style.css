@@ -36,16 +36,63 @@ body {
 
 
 .woodCountCl1 {
-color: aliceblue;
+    color: aliceblue;
 }
 
 .woodCountCl2 {
     color: rgb(0, 174, 180);
-    }
+}
 
 
 .resources div {
     display: flex;
+}
+
+#infoButton {
+    margin-left: 14px;
+    background-color: blue;
+    color: white;
+    border-radius: 45px;
+    border: white 1px solid;
+}
+
+.infoBox {
+    margin-top: 10px;
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    color: blue;
+}
+
+.infoBox:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid black;
+    right: 90%;
+    top: -20px;
+}
+
+.infoBox:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    right: 90%;
+    top: -18px;
 }
 
 #gainAmount {
@@ -53,7 +100,10 @@ color: aliceblue;
     margin-left: 8px;
 }
 
+
+
+
+
 #footer {
     background-color: black;
 }
-
