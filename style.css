@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: aliceblue;
+    background-color: gray;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer button {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    color: aliceblue;
+    background-color: rgb(74, 74, 74);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.buttonContainer button:hover {
+    box-shadow: 0px 0px 2px white;
+}
+
+.buttonContainer button:active {
+    box-shadow: 2px 2px 2px white, -2px -2px 2px white;
+}
+
+
+
+#footer {
+    background-color: black;
+}
