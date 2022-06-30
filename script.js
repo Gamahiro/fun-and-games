@@ -18,6 +18,23 @@ let goldAmount = 1000000;
 let houseAmount = 1;
 let villagerAmount = 0;
 
+
+
+/** @TODO Add img for resource that increases based on amount of resource held
+ * Add img for villagers & houses that represents how many owned
+ * buy resource functionality?
+ * Add items to increase resource gain
+ * add upgrades to housing/villagers
+ * add crafting of trade items to sell
+ * add tooltips
+ * add local save
+ * 
+ */
+
+
+
+
+
 function addWood() {
 woodAmount += 1;
 woodCount.textContent = woodAmount;
@@ -99,18 +116,21 @@ function gainVillagerIncome() {
 function changeColorText() {
 
     if(villagerAmount > 0) {
-    if (woodCount.className === "woodCountCl1") {
-        woodCount.className = "woodCountCl2";
-    } else {
+    if (woodCount.className === "woodCountCl2") {
         woodCount.className = "woodCountCl1";
+        gainAmount.style.opacity = "1";
+    } else {
+        woodCount.className = "woodCountCl2";
+        gainAmount.style.opacity = "0";
+
     }
     }else return;
 
 
 }
 
- setInterval(changeColorText, 750);
- setInterval(gainVillagerIncome, 1500);
+ setInterval(changeColorText, 325);
+ setInterval(gainVillagerIncome, 750);
 
 
 
