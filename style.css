@@ -48,6 +48,9 @@ color: aliceblue;
     display: flex;
 }
 
+#gainAmount {
+    color: yellow;
+}
 
 #footer {
     background-color: black;

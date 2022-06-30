@@ -14,7 +14,7 @@ const gainAmount = document.querySelector('#gainAmount');
 
 let woodAmount = 0;
 let plankAmount = 0;
-let goldAmount = 100;
+let goldAmount = 1000000;
 let houseAmount = 1;
 let villagerAmount = 0;
 
@@ -72,6 +72,9 @@ function sellItem(item) {
 }
 
 function recruitVillager() {
+console.log(villagerAmount / 2);
+
+    if(villagerAmount < houseAmount * 2) {
 
     if(goldAmount > 49) {
         goldAmount -= 50;
@@ -79,7 +82,8 @@ function recruitVillager() {
         villagerCount.textContent = villagerAmount;
         goldCount.textContent = goldAmount;
     }else {alert('villager costs 50 gold');}
-
+    
+}else {alert('You need 1 house per 2 villagers');}
 
 }
 
