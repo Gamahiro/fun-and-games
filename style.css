@@ -20,9 +20,10 @@ body {
     height: 50px;
     color: aliceblue;
     background-color: rgb(74, 74, 74);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     margin-bottom: 8px;
+    margin-left: 3px;
 }
 
 .buttonContainer button:hover {
@@ -34,7 +35,21 @@ body {
 }
 
 
+.woodCountCl1 {
+color: aliceblue;
+}
+
+.woodCountCl2 {
+    color: rgb(0, 174, 180);
+    }
+
+
+.resources div {
+    display: flex;
+}
+
 
 #footer {
     background-color: black;
 }
+
