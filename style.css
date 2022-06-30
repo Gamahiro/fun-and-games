@@ -8,6 +8,10 @@ body {
     background-color: gray;
 }
 
+#bannerCanvas {
+
+}
+
 .buttonContainer {
     display: flex;
     flex-direction: column;

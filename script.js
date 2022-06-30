@@ -12,6 +12,7 @@ const villagerCount = document.querySelector("#villagerCount");
 const recruitVillagerBtn = document.querySelector('#recruitVillager');
 const gainAmount = document.querySelector('#gainAmount');
 const infoButton = document.querySelector('#infoButton');
+const bannerCanvas = document.querySelector('#bannerCanvas');
 
 let woodAmount = 0;
 let plankAmount = 0;
@@ -20,6 +21,14 @@ let houseAmount = 1;
 let villagerAmount = 0;
 
 
+let banner = bannerCanvas.getContext("2d");
+banner.font = "50px Calibri";
+banner.strokeStyle = "black";
+banner.lineWidth = 6;
+banner.strokeText("Chop Wood!" , 10, 50);
+banner.fillStyle = "green";
+banner.fillText("Chop Wood!" , 10, 50);
+banner.textAlign = "center";
 
 /** @TODO Add img for resource that increases based on amount of resource held
  * Add img for villagers & houses that represents how many owned
