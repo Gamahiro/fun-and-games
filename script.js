@@ -1,4 +1,5 @@
 const mainContainer = document.querySelector(".mainContainer");
+const mainWindow = document.querySelector(".mainWindow");
 const chopWoodBtn = document.querySelector("#chopWood");
 const woodCount = document.querySelector("#woodCount");
 const craftPlankBtn = document.querySelector("#craftPlank");
@@ -13,12 +14,16 @@ const recruitVillagerBtn = document.querySelector('#recruitVillager');
 const gainAmount = document.querySelector('#gainAmount');
 const infoButton = document.querySelector('#infoButton');
 const bannerCanvas = document.querySelector('#bannerCanvas');
+const shop = document.createElement("button");
 
 let woodAmount = 0;
 let plankAmount = 0;
 let goldAmount = 1000000;
 let houseAmount = 1;
 let villagerAmount = 0;
+let toolAmount = 0;
+
+let mainWindowDisplay = "Shop";
 
 
 let banner = bannerCanvas.getContext("2d");
@@ -72,7 +77,19 @@ function buildHouse() {
     houseAmount += 1;
     plankCount.textContent = plankAmount;
     houseCount.textContent = houseAmount;
-    } else {alert('House costs 10 planks')}
+    } else alert('House costs 10 planks')
+}
+
+function buyItem(item) {
+    if (item === "tool") {
+        if(goldAmount > 15) {
+            goldAmount -= 15;
+            toolAmount += 1;
+
+        }else alert('Tools costs 15 gold');
+
+    }
+
 }
 
 function sellItem(item) {
@@ -155,8 +172,6 @@ buildHouseBtn.addEventListener('click', buildHouse);
 recruitVillagerBtn.addEventListener('click', recruitVillager);
 infoButton.addEventListener('click', () => {
 
-  
-
 if (visible === false) {
     document.querySelector(".infoBox").innerHTML = "<p>Testing a lot of stuff, we'll see how well this goes when i write a longer sentence</p>"
     document.querySelector(".infoBox").style.display = "block";
@@ -167,10 +182,24 @@ if (visible === false) {
     visible = false;
 }
 
+});
+
+document.querySelector("#shopBtn").addEventListener('click', () => {
+    if (mainWindowDisplay != "shop") {
+        mainWindowDisplay = "shop";
+        
+        
+mainWindow.innerHTML = '';
+mainWindow.innerHTML = '<button class="menuButton" id="buyToolsBtn">Buy Tools</button><p>Tools:</p><p id="toolCount">';
+document.querySelector("#buyToolsBtn").addEventListener('click', () => {
+    buyItem("tool");
+});   
 
 
+} else return;
 
-})
+
+});
 
 
 //wood > planks > house > villager with passive income

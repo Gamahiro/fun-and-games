@@ -8,9 +8,6 @@ body {
     background-color: gray;
 }
 
-#bannerCanvas {
-
-}
 
 .container {
     display: flex;
@@ -24,6 +21,7 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .menuButton {
@@ -57,7 +55,24 @@ body {
 }
 
 
-.resources div {
+.mainWindow {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 280px;
+    height: 280px;
+    padding: 10px;
+}
+
+#resources p {
+    margin-left: 15px;
+}
+
+#resources {
     display: flex;
 }
 
