@@ -14,7 +14,6 @@ const recruitVillagerBtn = document.querySelector('#recruitVillager');
 const gainAmount = document.querySelector('#gainAmount');
 const infoButton = document.querySelector('#infoButton');
 const bannerCanvas = document.querySelector('#bannerCanvas');
-const shop = document.createElement("button");
 
 let woodAmount = 0;
 let plankAmount = 0;
@@ -47,23 +46,27 @@ banner.textAlign = "center";
  */
 
 
+function updateResources() {
+woodCount.textContent = woodAmount;
+plankCount.textContent = plankAmount;
+goldCount.textContent = goldAmount;
+houseCount.textContent = houseAmount;
+villagerCount.textContent = villagerAmount;
+}
+
 
 
 
 function addWood() {
 woodAmount += 1;
-woodCount.textContent = woodAmount;
+updateResources();
 }
 
 function craftPlank() {
     if (woodAmount > 9) {
-
-    
 woodAmount -= 10;
-woodCount.textContent = woodAmount;
-
 plankAmount += 1;
-plankCount.textContent = plankAmount;
+updateResources();
 }else {
     alert('Not enough wood!')
 }
@@ -75,8 +78,7 @@ function buildHouse() {
     if(plankAmount > 9) {
     plankAmount -= 10;
     houseAmount += 1;
-    plankCount.textContent = plankAmount;
-    houseCount.textContent = houseAmount;
+    updateResources();
     } else alert('House costs 10 planks')
 }
 
@@ -97,8 +99,7 @@ function sellItem(item) {
         if(woodAmount > 9) {
         woodAmount -= 10;
         goldAmount += 1;
-        goldCount.textContent = goldAmount;
-        woodCount.textContent = woodAmount;
+        updateResources();
         }else {
             alert('You need to sell 10 at a time');
         }
@@ -107,8 +108,7 @@ function sellItem(item) {
         if(plankAmount > 9) {
         plankAmount -= 10;
         goldAmount += 11;
-        goldCount.textContent = goldAmount;
-        plankCount.textContent = plankAmount;
+        updateResources();
         }else {
             alert('You need to sell 10 at a time');
         }
@@ -123,8 +123,7 @@ console.log(villagerAmount / 2);
     if(goldAmount > 49) {
         goldAmount -= 50;
         villagerAmount += 1;
-        villagerCount.textContent = villagerAmount;
-        goldCount.textContent = goldAmount;
+        updateResources();
     }else {alert('villager costs 50 gold');}
     
 }else {alert('You need 1 house per 2 villagers');}
@@ -135,7 +134,7 @@ function gainVillagerIncome() {
 
     if(villagerAmount > 0) {
     woodAmount += villagerAmount;
-    woodCount.textContent = woodAmount;
+    updateResources();
     gainAmount.textContent = "+" + villagerAmount;
 } else return;
  }
@@ -187,13 +186,22 @@ if (visible === false) {
 document.querySelector("#shopBtn").addEventListener('click', () => {
     if (mainWindowDisplay != "shop") {
         mainWindowDisplay = "shop";
+
+        const buyToolsButton = document.createElement("button");
+
+        buyToolsButton.classList.add('menuButton');
+        buyToolsButton.id = 'shopButton';
+        buyToolsButton.textContent = 'Buy Tools';
+        mainWindow.appendChild(buyToolsButton);
+        
+
         
         
-mainWindow.innerHTML = '';
+/* mainWindow.innerHTML = '';
 mainWindow.innerHTML = '<button class="menuButton" id="buyToolsBtn">Buy Tools</button><p>Tools:</p><p id="toolCount">';
 document.querySelector("#buyToolsBtn").addEventListener('click', () => {
     buyItem("tool");
-});   
+});    */
 
 
 } else return;
