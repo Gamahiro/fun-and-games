@@ -18,7 +18,7 @@ const bannerCanvas = document.querySelector('#bannerCanvas');
 let woodAmount = 0;
 let plankAmount = 0;
 let goldAmount = 1000000;
-let houseAmount = 1;
+let houseAmount = 100;
 let villagerAmount = 0;
 let toolAmount = 0;
 

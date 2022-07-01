@@ -126,6 +126,15 @@ body {
 #gainAmount {
     color: yellow;
     margin-left: 8px;
+    position: absolute;
+    top: 60px;
+    left: 390px;
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: green;
+    border-radius: 45px;
+    border: aliceblue 1px solid;
 }
 
 
