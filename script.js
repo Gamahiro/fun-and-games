@@ -4,8 +4,6 @@ const chopWoodBtn = document.querySelector("#chopWood");
 const woodCount = document.querySelector("#woodCount");
 const craftPlankBtn = document.querySelector("#craftPlank");
 const plankCount = document.querySelector("#plankCount");
-const sellWoodBtn = document.querySelector("#sellWoodBtn");
-const sellPlanksBtn = document.querySelector("#sellPlanksBtn");
 const goldCount = document.querySelector("#goldCount");
 const houseCount = document.querySelector("#houseCount")
 const buildHouseBtn = document.querySelector("#buildHouse");
@@ -161,16 +159,44 @@ function changeColorText() {
 
  let visible = false;
 
+ document.querySelector("#shopBtn").addEventListener('click', () => {
+    if (mainWindowDisplay != "shop") {
+        mainWindowDisplay = "shop";
 
+        const buyToolsButton = document.createElement("button");
+
+        buyToolsButton.classList.add('menuButton');
+        buyToolsButton.id = 'shopButton';
+        buyToolsButton.textContent = 'Buy Tools';
+        
+
+        const sellWoodBtn = document.createElement('button');
+        sellWoodBtn.id = "sellWoodBtn";
+        sellWoodBtn.classList.add('menuButton');
+        sellWoodBtn.textContent = 'Sell Wood';
+        sellWoodBtn.addEventListener('click', () => {sellItem("wood");});
+
+        const sellPlanksBtn = document.createElement('button');
+        sellPlanksBtn.id = "sellPlanksBtn";
+        sellPlanksBtn.classList.add('menuButton');
+        sellPlanksBtn.textContent ='Sell planks';
+        sellPlanksBtn.addEventListener('click', () => {sellItem("planks");});
+
+        mainWindow.appendChild(buyToolsButton);
+        mainWindow.appendChild(sellWoodBtn);
+            mainWindow.appendChild(sellPlanksBtn);
+
+
+    } else return;
+});
 
 chopWoodBtn.addEventListener('click', addWood);
 craftPlankBtn.addEventListener('click', craftPlank);
-sellWoodBtn.addEventListener('click', () => {sellItem("wood");});
-sellPlanksBtn.addEventListener('click', () => {sellItem("planks");});
+
+
 buildHouseBtn.addEventListener('click', buildHouse);
 recruitVillagerBtn.addEventListener('click', recruitVillager);
 infoButton.addEventListener('click', () => {
-
 if (visible === false) {
     document.querySelector(".infoBox").innerHTML = "<p>Testing a lot of stuff, we'll see how well this goes when i write a longer sentence</p>"
     document.querySelector(".infoBox").style.display = "block";
@@ -180,36 +206,14 @@ if (visible === false) {
     document.querySelector(".infoBox").style.display = "none";
     visible = false;
 }
-
 });
 
-document.querySelector("#shopBtn").addEventListener('click', () => {
-    if (mainWindowDisplay != "shop") {
-        mainWindowDisplay = "shop";
 
-        const buyToolsButton = document.createElement("button");
-
-        buyToolsButton.classList.add('menuButton');
-        buyToolsButton.id = 'shopButton';
-        buyToolsButton.textContent = 'Buy Tools';
-        mainWindow.appendChild(buyToolsButton);
-        
-
-        
-        
-/* mainWindow.innerHTML = '';
+ /* mainWindow.innerHTML = '';
 mainWindow.innerHTML = '<button class="menuButton" id="buyToolsBtn">Buy Tools</button><p>Tools:</p><p id="toolCount">';
 document.querySelector("#buyToolsBtn").addEventListener('click', () => {
     buyItem("tool");
 });    */
 
 
-} else return;
 
-
-});
-
-
-//wood > planks > house > villager with passive income
-//villager costs gold
-//get gold by selling wood & planks
