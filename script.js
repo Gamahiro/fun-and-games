@@ -1,4 +1,4 @@
-const container = document.querySelector(".container");
+const mainContainer = document.querySelector(".mainContainer");
 const chopWoodBtn = document.querySelector("#chopWood");
 const woodCount = document.querySelector("#woodCount");
 const craftPlankBtn = document.querySelector("#craftPlank");

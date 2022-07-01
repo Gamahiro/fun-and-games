@@ -12,12 +12,21 @@ body {
 
 }
 
+.container {
+    display: flex;
+}
+
 .buttonContainer {
     display: flex;
     flex-direction: column;
 }
 
-.buttonContainer button {
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuButton {
     border: 2px solid black;
     border-radius: 8px;
     width: 150px;
@@ -30,11 +39,11 @@ body {
     margin-left: 3px;
 }
 
-.buttonContainer button:hover {
+.menuButton:hover {
     box-shadow: 0px 0px 2px white;
 }
 
-.buttonContainer button:active {
+.menuButton:active {
     box-shadow: 2px 2px 2px white, -2px -2px 2px white;
 }
 
