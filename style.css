@@ -10,18 +10,19 @@ body {
 
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .buttonContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     margin-top: 30px;
+    grid-template-rows: repeat(3, 1fr) 5fr;
 }
 
 .menuButton {
