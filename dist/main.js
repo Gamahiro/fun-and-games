@@ -1,0 +1,1 @@
+(()=>{"use strict";class o{constructor(o,e,s,t){this.name=o,this.resourceType=e,this.gainAmount=s,this.health=t}}const e=new o("Lumber Mill","wood",1,100);new o("Gold Mine","gold",3,100),console.log(e.health),e.health=50,console.log(e)})();
