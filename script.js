@@ -1,3 +1,4 @@
+
 const mainContainer = document.querySelector(".mainContainer");
 const mainWindow = document.querySelector(".mainWindow");
 const chopWoodBtn = document.querySelector("#chopWood");
@@ -43,14 +44,36 @@ banner.textAlign = "center";
  * 
  */
 
+const gameModule = (() => {
 
-function updateResources() {
-woodCount.textContent = woodAmount;
-plankCount.textContent = plankAmount;
-goldCount.textContent = goldAmount;
-houseCount.textContent = houseAmount;
-villagerCount.textContent = villagerAmount;
+
+
+
+
+
+});
+
+
+const uiModule = (() => {
+
+return {
+    updateResources: function () {
+        
+        woodCount.textContent = woodAmount;
+        plankCount.textContent = plankAmount;
+        goldCount.textContent = goldAmount;
+        houseCount.textContent = houseAmount;
+        villagerCount.textContent = villagerAmount;
+        }
 }
+
+
+
+
+});
+
+
+
 
 
 
