@@ -6,16 +6,19 @@ class playerResource {
         this.amount = amount;
     }
     get name() {
-        return this.name;
+        return this._name;
+    }
+    set name(setName) {
+        this._name = setName;
     }
 
 
     get amount() {
-        return this.amount;
+        return this._amount;
     }
 
     set amount(value) {
-        this.amount = value;
+        this._amount = value;
     }
 }
 
@@ -23,17 +26,17 @@ class playerResource {
 //class for buildings that will give the player yield
 
 class playerBuilding {
-    constructor(name, cost, yield, type) {
+    constructor(name, cost, gain, type) {
         this.name = name;
         this.cost = cost;
-        this.yield = yield;
+        this.gain = gain;
         this.type = type;
     }
     get name() {
         return this.name;
     }
     get yield() {
-        return this.yield;
+        return this.gain;
     }
     get type() {
         return this.type;
@@ -65,36 +68,8 @@ class playerVillager {
 
 }
 
-
-
-
-//player will store an array for each type of asset
-const player = (name) => {
-
-    let playerResources = [];
-    let playerBuildings = [];
-    let playerVillagers = [];
-
-
-
-
+export {
+    playerResource,
+    playerVillager,
+    playerBuilding
 }
-
-
-
-
-
-
-
-const gameModule = (() => {
-    'use strict';
-
-
-
-
-
-
-});
-
-
-
