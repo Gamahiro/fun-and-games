@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"playerBuilding\": () => (/* binding */ playerBuilding),\n/* harmony export */   \"playerResource\": () => (/* binding */ playerResource),\n/* harmony export */   \"playerVillager\": () => (/* binding */ playerVillager)\n/* harmony export */ });\n//class for resources the player can spend on buildings, tools or in shop, for example gold, wood\n\nclass playerResource {\n    constructor(name, amount) {\n        this.name = name;\n        this.amount = amount;\n    }\n    get name() {\n        return this._name;\n    }\n    set name(setName) {\n        this._name = setName;\n    }\n\n\n    get amount() {\n        return this._amount;\n    }\n\n    set amount(value) {\n        this._amount = value;\n    }\n}\n\n\n//class for buildings that will give the player yield\n\nclass playerBuilding {\n    constructor(name, cost, gain, type) {\n        this.name = name;\n        this.cost = cost;\n        this.gain = gain;\n        this.type = type;\n    }\n    get name() {\n        return this.name;\n    }\n    get yield() {\n        return this.gain;\n    }\n    get type() {\n        return this.type;\n    }\n    get cost() {\n        return this.cost;\n    }\n\n}\n\n\n//Villagers that can be used with buildings to increase the yield of buildings\nclass playerVillager {\n    constructor(name, upkeep, workPower) {\n        this.name = name;\n        this.upkeep = upkeep;\n        this.workPower = workPower;\n    }\n\n    get name() {\n        return this.name;\n    }\n    get upkeep() {\n        return this.upkeep;\n    }\n    get workPower() {\n        return this.workPower;\n    }\n\n}\n\n\n\n//# sourceURL=webpack://fun-and-games/./src/factory/factory.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"playerBuilding\": () => (/* binding */ playerBuilding),\n/* harmony export */   \"playerResource\": () => (/* binding */ playerResource),\n/* harmony export */   \"playerVillager\": () => (/* binding */ playerVillager)\n/* harmony export */ });\n//class for resources the player can spend on buildings, tools or in shop, for example gold, wood\n\nclass playerResource {\n    constructor(name, amount) {\n        this.name = name;\n        this.amount = amount;\n    }\n    get name() {\n        return this._name;\n    }\n    set name(setName) {\n        this._name = setName;\n    }\n\n\n    get amount() {\n        return this._amount;\n    }\n\n    set amount(value) {\n        this._amount = value;\n    }\n}\n\n\n//class for buildings that will give the player yield\n\nclass playerBuilding {\n    constructor(name, cost, gain, type) {\n        this.name = name;\n        this.cost = cost;\n        this.gain = gain;\n        this.type = type;\n    }\n    get name() {\n        return this._name;\n    }\n    set name(value) {\n        this._name = value;\n    }\n    get gain() {\n        return this._gain;\n    }\n    set gain(value) {\n        this._gain = value;\n    }\n    get type() {\n        return this._type;\n    }\n    set type(value) {\n        this._type = value;\n    }\n    get cost() {\n        return this._cost;\n    }\n    set cost(value) {\n        this._cost = value;\n    }\n\n}\n\n\n//Villagers that can be used with buildings to increase the yield of buildings\nclass playerVillager {\n    constructor(name, upkeep, workPower) {\n        this.name = name;\n        this.upkeep = upkeep;\n        this.workPower = workPower;\n    }\n\n    get name() {\n        return this._name;\n    }\n    set name(value) {\n        this._name = value;\n    }\n    get upkeep() {\n        return this.upkeep;\n    }\n    set upkeep(value) {\n        this._upkeep = value;\n    }\n    get workPower() {\n        return this.workPower;\n    }\n    set workPower(value) {\n        this._workPower = value;\n    }\n}\n\n\n\n//# sourceURL=webpack://fun-and-games/./src/factory/factory.js?");
 
 /***/ }),
 
@@ -126,17 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_G_Logo_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/G-Logo.jpg */ \"./src/assets/G-Logo.jpg\");\n/* harmony import */ var _factory_factory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./factory/factory */ \"./src/factory/factory.js\");\n\n\n\n\nconst gold = new _factory_factory__WEBPACK_IMPORTED_MODULE_2__.playerResource('Gold', 50);\n\nconsole.log(gold.name);\n\n\n//player will store an array for each type of asset\nconst player = (name) => {\n\n    let playerResources = [];\n    let playerBuildings = [];\n    let playerVillagers = [];\n}\n\n\n\n\n\n\n\nconst gameModule = (() => {\n    'use strict';\n\n\n\n\n\n\n});\n\n\n\n\n\n//# sourceURL=webpack://fun-and-games/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/assets/G-Logo.jpg":
-/*!*******************************!*\
-  !*** ./src/assets/G-Logo.jpg ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"aec7a3fc3797f1532b50.jpg\";\n\n//# sourceURL=webpack://fun-and-games/./src/assets/G-Logo.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _factory_factory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./factory/factory */ \"./src/factory/factory.js\");\n\n\n\nconst gold = new _factory_factory__WEBPACK_IMPORTED_MODULE_1__.playerResource('Gold', 50);\n\nconsole.log(gold.name);\n\n\n//player will store an array for each type of asset\nconst player = (name) => {\n\n    let playerResources = [];\n    let playerBuildings = [];\n    let playerVillagers = [];\n}\n\n\n\n\n\n\n\nconst gameModule = (() => {\n    'use strict';\n\n\n\n\n\n\n});\n\n\n\n\n\n//# sourceURL=webpack://fun-and-games/./src/index.js?");
 
 /***/ })
 
@@ -191,18 +181,6 @@ eval("module.exports = __webpack_require__.p + \"aec7a3fc3797f1532b50.jpg\";\n\n
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -217,26 +195,6 @@ eval("module.exports = __webpack_require__.p + \"aec7a3fc3797f1532b50.jpg\";\n\n
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

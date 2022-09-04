@@ -1,5 +1,4 @@
 import './style.css';
-import './assets/G-Logo.jpg';
 import { playerResource, playerVillager, playerBuilding } from './factory/factory';
 
 const gold = new playerResource('Gold', 50);

@@ -33,16 +33,28 @@ class playerBuilding {
         this.type = type;
     }
     get name() {
-        return this.name;
+        return this._name;
     }
-    get yield() {
-        return this.gain;
+    set name(value) {
+        this._name = value;
+    }
+    get gain() {
+        return this._gain;
+    }
+    set gain(value) {
+        this._gain = value;
     }
     get type() {
-        return this.type;
+        return this._type;
+    }
+    set type(value) {
+        this._type = value;
     }
     get cost() {
-        return this.cost;
+        return this._cost;
+    }
+    set cost(value) {
+        this._cost = value;
     }
 
 }
@@ -57,15 +69,23 @@ class playerVillager {
     }
 
     get name() {
-        return this.name;
+        return this._name;
+    }
+    set name(value) {
+        this._name = value;
     }
     get upkeep() {
         return this.upkeep;
     }
+    set upkeep(value) {
+        this._upkeep = value;
+    }
     get workPower() {
         return this.workPower;
     }
-
+    set workPower(value) {
+        this._workPower = value;
+    }
 }
 
 export {

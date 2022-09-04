@@ -4,12 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   watch: true,
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Game',
-      template: './src/index.html',
-      favicon: "./src/assets/G-Logo.jpg"
+        title:'game',
+        filename: 'dist/index.html',
+        template: 'src/index.html',
+      favicon: "src/assets/G-Logo.jpg",
+
     }),
   ],
   module: {
@@ -22,8 +26,12 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      { 
+        test: /\.html$/, loader: 'html'
+    }
     ],
-  },
+  }, 
+  
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
